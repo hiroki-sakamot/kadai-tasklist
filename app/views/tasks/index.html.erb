@@ -4,12 +4,12 @@
 
   <ul>
   <% @tasks.each do |task| %>
-      <li><%= link_to task.id, user_path(task.user) %> : <%= task.status %> &gt; <%= task.content %></li>
+      <li><%= link_to task.id, task_path(task.id) %> : <%= task.status %> &gt; <%= task.content %></li>
   <% end %>
   
   </ul>
 
-<%= link_to '新規タスクの投稿', tasks_path %>
+<%= link_to '新規タスクの投稿' , new_task_path %>
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">
